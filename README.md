@@ -2,8 +2,6 @@
 
 A native KDE Plasma KRunner plugin to quickly check the upcoming stream schedule for Neuro-sama, Evil Neuro, and Vedal, and easily set desktop reminders!
 
-Written in Python using the KRunner DBus API, featuring a native QML Kirigami configuration module that perfectly blends with your Plasma desktop!
-
 ### Features:
 - Instantly search the upcoming stream schedule directly from KRunner.
 - Filter by specific streamers (Neuro, Evil, Twins, Vedal, or Collabs).
