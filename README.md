@@ -12,7 +12,7 @@ A native KDE Plasma KRunner plugin to quickly check the upcoming stream schedule
 ### Screenshots:
 #### Check the upcoming stream schedule
 ![Check the schedule](https://raw.githubusercontent.com/bw8686/NeuroKRunner/master/screenshots/schedule.png)
-#### Filter by specific streamers (e.g. 'next')
+#### Filter by specific streamers (e.g. 'neuro')
 ![Filter by specific streamers](https://raw.githubusercontent.com/bw8686/NeuroKRunner/master/screenshots/schedulenext.png)
 #### View stream details and opt-in to notifications
 ![View stream details and opt-in to notifications](https://raw.githubusercontent.com/bw8686/NeuroKRunner/master/screenshots/streaminfo.png)
