@@ -11,19 +11,19 @@ mkdir -p "$krunner_dbusdir"
 mkdir -p "$services_dir"
 mkdir -p "$prefix/applications"
 mkdir -p "$app_dir"
+mkdir -p "$prefix/icons/hicolor/256x256/apps"
 
 echo "Copying application source files..."
 # Copy everything (Python scripts, QML, assets) to the permanent directory
 cp -r main.py config.py settings_ui.py settings.qml assets/ "$app_dir/"
 chmod +x "$app_dir/main.py"
 
-echo "Configuring desktop file with absolute icon paths..."
-# Point to the permanent assets folder instead of $PWD
-sed "s|Icon=planetkde|Icon=$app_dir/assets/neuro.png|" neurokrunner.desktop > /tmp/neurokrunner.desktop
+echo "Installing application icon..."
+cp "assets/neuro.png" "$prefix/icons/hicolor/256x256/apps/neurokrunner.png"
 
 echo "Copying plugin files..."
-cp /tmp/neurokrunner.desktop "$krunner_dbusdir/"
-cp /tmp/neurokrunner.desktop "$prefix/applications/"
+cp neurokrunner.desktop "$krunner_dbusdir/"
+cp neurokrunner.desktop "$prefix/applications/"
 
 echo "Registering D-Bus service..."
 # Point the D-Bus service file to the permanent location

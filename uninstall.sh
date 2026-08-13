@@ -19,6 +19,9 @@ rm -f "$krunner_dbusdir/neurokrunner.desktop"
 echo "Removing desktop application file..."
 rm -f "$prefix/applications/neurokrunner.desktop"
 
+echo "Removing application icon..."
+rm -f "$prefix/icons/hicolor/256x256/apps/neurokrunner.png"
+
 echo "Removing application source files..."
 rm -rf "$app_dir"
 
