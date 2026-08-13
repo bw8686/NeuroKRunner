@@ -12,7 +12,16 @@ Written in Python using the KRunner DBus API, featuring a native QML Kirigami co
 - Fully customizable icons and behaviors through a native KDE settings window.
 
 ### Screenshots:
-*(Coming soon)*
+#### Check the upcoming stream schedule
+![Check the schedule](https://raw.githubusercontent.com/bw8686/NeuroKRunner/master/screenshots/schedule.png)
+#### Filter by specific streamers (e.g. 'next')
+![Filter by specific streamers](https://raw.githubusercontent.com/bw8686/NeuroKRunner/master/screenshots/schedulenext.png)
+#### View stream details and opt-in to notifications
+![View stream details and opt-in to notifications](https://raw.githubusercontent.com/bw8686/NeuroKRunner/master/screenshots/streaminfo.png)
+#### Get a desktop reminder when the stream starts
+![Desktop reminder confirmation](https://raw.githubusercontent.com/bw8686/NeuroKRunner/master/screenshots/reminderset.png)
+#### Configure Native KDE settings
+![Native KDE Settings](https://raw.githubusercontent.com/bw8686/NeuroKRunner/master/screenshots/schedulesettings.png)
 
 ### Syntax Examples:
 
