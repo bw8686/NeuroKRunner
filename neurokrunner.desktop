@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=NeuroKRunner
+Comment=NeuroKRunner Runner written in Python
+Type=Service
+X-KDE-ServiceTypes=Plasma/Runner
+Icon=planetkde
+X-KDE-PluginInfo-Author=bw8686
+X-KDE-PluginInfo-Email=hello@autow.in
+X-KDE-PluginInfo-Name=neurokrunner
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=LGPL
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=DBus
+X-Plasma-DBusRunner-Service=org.kde.neurokrunner
+NoDisplay=true

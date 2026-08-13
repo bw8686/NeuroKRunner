@@ -1,0 +1,5 @@
+[General]
+Name=NeuroKRunner
+Comment=A native KDE Plasma KRunner plugin to quickly check the upcoming stream schedule for Neuro-sama, Evil Neuro, and Vedal.
+Category=Plasma/KRunner
+Icon=planetkde
