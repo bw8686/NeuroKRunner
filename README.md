@@ -57,15 +57,9 @@ chmod +x install.sh
 ./install.sh
 ```
 
-
-```bash
-git clone https://github.com/bw8686/NeuroKRunner.git
-cd NeuroKRunner
-./install.sh
-```
-
 **Dependencies:**
 - `python3`
 - `python3-pyqt6` (For the settings UI and popups)
 - `curl` (To fetch the schedule)
 - `notify-send` (For system notifications)
+
