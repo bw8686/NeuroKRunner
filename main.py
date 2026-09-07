@@ -278,6 +278,19 @@ class Runner(dbus.service.Object):
     def __init__(self):
         dbus.service.Object.__init__(self, dbus.service.BusName("org.kde.neurokrunner", dbus.SessionBus()), objpath)
         
+        # Auto-install icon into system theme for KDE Store users
+        try:
+            import shutil
+            icon_dest_dir = os.path.expanduser("~/.local/share/icons/hicolor/256x256/apps")
+            icon_dest = os.path.join(icon_dest_dir, "neurokrunner.png")
+            if not os.path.exists(icon_dest):
+                os.makedirs(icon_dest_dir, exist_ok=True)
+                shutil.copy2(os.path.join(BASE_DIR, 'assets', 'neuro.png'), icon_dest)
+                # Refresh KDE icon cache quietly
+                subprocess.Popen(["kbuildsycoca6"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        except Exception:
+            pass
+
         # Trigger initial poll
         GLib.timeout_add(3000, poll_schedule)
         GLib.timeout_add_seconds(3600, poll_schedule)
@@ -314,14 +327,14 @@ class Runner(dbus.service.Object):
             
             # Determine icon based on THIS specific stream's participants
             icon = cfg['icons'].get('schedule', '')
-            if "neuro" in streamers_list and "evil" in streamers_list:
+            if "vedal" in streamers_list:
+                icon = cfg['icons'].get('vedal', '')
+            elif "neuro" in streamers_list and "evil" in streamers_list:
                 icon = cfg['icons'].get('twins', '')
             elif "neuro" in streamers_list:
                 icon = cfg['icons'].get('neuro', '')
             elif "evil" in streamers_list:
                 icon = cfg['icons'].get('evil', '')
-            elif "vedal" in streamers_list:
-                icon = cfg['icons'].get('vedal', '')
             
             if target in ["neuro", "evil", "vedal", "twins"]:
                 text = title
